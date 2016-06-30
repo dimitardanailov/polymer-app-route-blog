@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "title": "The Best Nature Photographs Of 2015",
+      "slug": "first-post",
+      "img": "images/post1.jpeg",
+      "img_alt": "The first post image"
+    },
+    {
+      "title": "If nature is the cure, what is the disease?",
+      "slug": "second-post",
+      "img": "images/post2.jpeg",
+      "img_alt": "The second post image"
+    },
+    {
+      "title": "Magic Trails",
+      "slug": "third-post",
+      "img": "images/post3.jpeg",
+      "img_alt": "The third post image"
+    }
+  ]
+}
