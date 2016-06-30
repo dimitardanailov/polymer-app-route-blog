@@ -50,8 +50,9 @@
                    tail="{{categoryTail}}"></app-route>
 
         <nav>
+            <!-- Make sure this is a one way binding or wacky things will happen -->
             <iron-selector
-                selected="{{categoryData.category}}"
+                selected="[[categoryData.category]]"
                 attr-for-selected="data-page">
 
                 <a data-page="art" href="#/art/list">Art</a>

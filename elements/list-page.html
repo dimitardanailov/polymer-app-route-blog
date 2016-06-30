@@ -1,4 +1,5 @@
 <link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
 
 <dom-module id="list-page">
 
@@ -32,12 +33,24 @@
           auto
           url="[[_completeURL(category)]]"
           handle-as="json"
+          loading="{{loading}}"
           last-response="{{postList}}"></iron-ajax>
 
         <template is="dom-repeat" items="{{postList.posts}}">
             <div class="post">
                 <a href="#/[[category]]/posts/[[item.slug]]">
+                    <!--
                     <img src="[[item.img]]" alt="[[item.img_alt]]" />
+                    -->
+                    <iron-image
+                        style="width:900px; height:512px;"
+                        placeholder="[[item.img_placeholder]]"
+                        sizing="cover"
+                        preload
+                        fade
+                        alt="[[item.img_alt]]" 
+                        src="[[item.img]]"></iron-image>
+
                     <h2>[[item.title]]</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -58,10 +71,17 @@
             'is': 'list-page',
 
             'properties': {
+
                 'active': {
                     'type': Boolean,
                     'value': false,
                     'reflectToAttribute': true
+                },
+
+                'loading': {
+                    'type': Boolean,
+                    'value': false,
+                    'notify': true
                 }
             },
 

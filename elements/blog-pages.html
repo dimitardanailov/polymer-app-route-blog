@@ -1,4 +1,5 @@
 <link rel="import" href="../bower_components/app-route/app-route.html">
+<link rel="import" href="../bower_components/paper-spinner/paper-spinner.html">
 
 <link rel="import" href="list-page.html">
 <link rel="import" href="post-page.html">
@@ -9,6 +10,21 @@
         <style>
             :host {
                 display: block;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                background-color: #fff
             }
         </style>
 
@@ -24,16 +40,35 @@
 
         <list-page
             category="{{category}}"
-            active="{{listActive}}"></list-page>
+            active="{{listActive}}"
+            loading="{{isLoading}}"></list-page>
 
         <post-page
             post="{{postsData.slug}}"
-            active="{{postsActive}}"></post-page>
+            active="{{postsActive}}"
+            loading="{{isLoading}}"></post-page>
+
+        <div class="overlay" hidden$="[[!isLoading]]">
+          <paper-spinner active="[[isLoading]]"></paper-spinner>
+        </div>
+
     </template>
 
     <script>
         Polymer({
-            'is': 'blog-pages'
+            'is': 'blog-pages',
+
+            'observers': [
+                '_lockScroll(isLoading)'
+            ],
+
+            '_lockScroll': function(isLoading) {
+                if (isLoading) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = 'visible';
+                }
+            }
         });
     </script>
 
