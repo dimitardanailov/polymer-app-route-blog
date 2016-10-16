@@ -37,6 +37,3 @@ firebase use --add
 ```bash
 polymer deploy
 ```
-
-# polymer-app-route-blog
-Routing with app-route and lazy loading
