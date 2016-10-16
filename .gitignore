@@ -28,3 +28,7 @@ Temporary Items
 # Bower
 
 bower_components
+
+# Firebase and build
+public
+build
