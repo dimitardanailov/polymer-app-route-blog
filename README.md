@@ -4,7 +4,7 @@ I'd like to share my article about [Polymer vs Angular vs React: Which is leadin
 
 The blog app I created is built using the toolbox and served using the PRPL pattern and multi-view progressive web app.
 
-Live demo: [https://mentormate-polymer.firebaseapp.com](https://mentormate-polymer.firebaseapp.com)
+[Live demo](https://mentormate-polymer.firebaseapp.com)
 
 ### Polymer build CLI
 
