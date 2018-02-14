@@ -1,6 +1,6 @@
 # Polymer and Firebase app
 
-I'd like to share my article about [Polymer vs Angular vs React: Which is leading the future of web apps?](http://mentormate.com/blog)
+I'd like to share my article about [Polymer vs Angular vs React: Which is leading the future of web apps?](https://mentormate.com/blog/polymer-vs-angular-future-web-apps/)
 
 The blog app I created is built using the toolbox and served using the PRPL pattern and multi-view progressive web app.
 
